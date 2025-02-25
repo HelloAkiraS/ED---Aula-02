@@ -105,5 +105,27 @@ void inserirElemento()
 // deve ser implementada como resposta ao exercicio
 void buscarElemento()
 {
+	int i = 0;
+	int elemento = 0;
+	int elementoAchado = 0;
+	int elementoNaoAchado = 0;
 
+	cout << "Digite o valor que quer encontrar." << endl;
+	cin >> elemento;
+
+	for (i; i < nElementos; i++) {
+		if (lista[i] == elemento) {
+			elementoAchado++;
+			cout << "Elemento encontrado na posicao [" << i << "] do Vetor!" << endl;
+		}
+	}
+	if (elementoAchado > 0) {
+		cout << "Quantidade de elementos achados: " << elementoAchado << endl;
+
+		elementoNaoAchado = nElementos - elementoAchado;
+		cout << "Quantidade de elementos NAO achados: " << elementoNaoAchado << endl << endl;
+	}
+	else {
+		cout << "Nao foi achado nenhum elemento com esse valor! " << endl;
+	}
 }
